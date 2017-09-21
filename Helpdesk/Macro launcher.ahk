@@ -67,9 +67,9 @@ Menu, triagemenu, Add, Ticket closing, Ticket_End
 
 ; - Basic troubleshooting main -
 Menu, troubleshooting-submenu, Add, Opening questions, Basic_Questions_TXT
-Menu, troubleshooting-submenu, Add, Phone Number, deptnumber
+Menu, troubleshooting-submenu, Add, Phone Numbers, sdnumber
 Menu, troubleshooting-submenu, Add
-Menu, troubleshooting-submenu, Add, Triage reminder, Triage_checklist
+Menu, troubleshooting-submenu, Add, Triage reminder, checklist
 ; - Specialized troubleshooting main -
 
 
@@ -79,7 +79,7 @@ Menu, troubleshooting-submenu, Add, Triage reminder, Triage_checklist
 
 
 ; Hosted applications > Confluence
-Menu, confluence-sub, Add, Hosted app question, hostedapps-txt
+Menu, hosted-apps-sub, Add, Hosted app question, hostedapps-txt
 
 ; Hosted apps menu
 Menu, hosted-apps-sub, Add, Hosted app 1, :hosted-apps-sub
@@ -98,7 +98,7 @@ Menu, vpn-submenu, Add, Reset, VPN_reset
 
 
 ; -- Shoretel -- ; Can be anything below
-Menu, shoretel-submenu, Add, Account creation, Shoretel_creation_closing_TXT
+Menu, phone-submenu, Add, Account creation, phone_creation_closing_TXT
 
 ; -- Windows --;
 ; -- Forced updates --
@@ -112,7 +112,7 @@ Menu, windows-submenu, Add, Updates and software installs, :winupdate-software
 ; --- Specialized Main menu --- ; Examples that can be used for more advanced quick menus
 Menu, adv-submenu, Add, Hosted applications, :hosted-apps-sub
 Menu, adv-submenu, Add, Linux and Cluster, :linux-cluster-submenu
-Menu, adv-submenu, Add, Shoretel, :shoretel-submenu
+Menu, adv-submenu, Add, Phones, :phone-submenu
 Menu, adv-submenu, Add, VPN, :vpn-submenu
 Menu, adv-submenu, Add, Windows, :windows-submenu
 
@@ -139,7 +139,7 @@ Menu, kb-triage, Add, Item name 1, article1
 
 ; - Ticket system quicklinks - ; This section can be used to call API's on your system. 
 
-Menu, ticketlink, Add, Software catalog, softcatalog
+Menu, ticketlink, Add, Software List, softcatalog
 Menu, ticketlink, Add, Knowledge homepage, knowledgecatalog
 
 
@@ -156,12 +156,12 @@ Menu, kb-SubMenu, Add, Ticketsystem Quicklinks, :ticketlink
 Menu, softwaremenu, Add, Camtasia Studio, Camtasia_TXT
 Menu, softwaremenu, Add, JetBrains, JetBrains_TXT
 Menu, softwaremenu, Add, OmniGraffle Pro, OmniGraffle_TXT
-Menu, softwaremenu, Add, ShoreTel, ShoreTel_s_TXT
+Menu, softwaremenu, Add, Phone, phone_s_TXT
 Menu, softwaremenu, Add, Visual Studio Pro, VisualStudio_PRO_TXT
 Menu, softwaremenu, Add, Visio, Visio_TXT
 
 ; --- ServiceNow Formatting/Shortcuts ---;
-Menu, SNOW-submenu, Add, Insert URL, SnowUrl
+Menu, ticket-submenu, Add, Insert URL, ticketUrl
 
 
 
@@ -172,7 +172,7 @@ Menu, FullMenu, Add, Basic Troubleshooting, :troubleshooting-submenu
 Menu, FullMenu, Add, Specialized Closings or Questions, :adv-submenu
 Menu, FullMenu, Add, Information Quicklist, :kb-SubMenu
 Menu, FullMenu, Add, Software Installs, :softwaremenu
-Menu, FullMenu, Add, ServiceNow Formatting/Shortcuts, :SNOW-submenu
+Menu, FullMenu, Add, Ticket Formatting/Shortcuts, :ticket-submenu
 
 ;options menu
 Menu, FullMenu, Add ;blank
@@ -192,12 +192,12 @@ Menu, FullMenu, Disable, Version %version% ; Blanks out version number
 ;-- Default Tray --;  This is the tray icon ;
 Menu, Tray, NoStandard ; disables the default options in the tray icon
 Menu, Tray, Icon, %A_ScriptDir%\Data-folder\settings\icon.ico, 1 ; optional, allows you to set a default icon
-Menu, Tray, add, Service Desk Scripts, settings_set ; This is a custom options menu created with a gui
+Menu, Tray, add, IT Scripts, settings_set ; This is a custom options menu created with a gui
 Menu, Tray, Disable, Service Desk Scripts ; allows a title to be added then grayed out
 Menu, Tray, add, Version %version%, Dummy_TXT
 Menu, Tray, Disable, Version %version% ; allows a title to be added then grayed out, lists version number 
 Menu, Tray, add, Settings, settings_set
-Menu, Tray, Default, Service Desk Scripts ; sets a default double click action on the tray icon
+Menu, Tray, Default, IT Scripts ; sets a default double click action on the tray icon
 Menu, Tray, Add, Quit, quitscript ; Adds a quit option from the tray menu
 
 return ; ends the menu section
